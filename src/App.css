@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Left side - task input section */
+.left-side {
+  width: 30vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  border-right: 2px solid #e0e0e0;
+  padding: 20px;
+  background-color: cornsilk;
+}
+
+.header {
+  border: 2px solid teal;
+  border-radius: 80%;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  background-color: lightcoral;
+}
+
+.header h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.task-input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: azure;
+  color: navy
+}
+
+.add-task-button {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: teal;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.add-task-button:hover {
+  background-color: #008080;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right-side{
+  width:70vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: azure;
 }
+
+.right-side-header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width:70%;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightcoral;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+
